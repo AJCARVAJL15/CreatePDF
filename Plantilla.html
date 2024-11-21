@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+body{
+    font-family: "Raleway";
+}
+
+ion-content,.bg{
+    background-color: #F1F1F1 !important;
+    background: #F1F1F1 !important;
+    --background: #F1F1F1 !important;
+}
+.w-100 {
+    width: 100% !important;
+}
+
+.w-10 {
+ width: 10%;
+}
+
+.w-20 {
+ width: 20%;
+}
+
+
+.w-25 {
+ width: 25%;
+}
+
+.w-30 {
+ width: 30%;
+}
+
+.w-33 {
+ width: 33%;
+}
+
+.w-40 {
+ width: 40%;
+}
+
+.w-50 {
+ width: 50%;
+}
+
+.w-90 {
+ width: 90%;
+}
+
+.w-60 {
+ width: 70%;
+}
+
+.w-70 {
+ width: 70%;
+}
+
+.w-80 {
+ width: 80%;
+}
+
+.mb-10{
+ margin-bottom: 10px;
+}
+
+.mb-15{
+ margin-bottom: 15px;
+}
+
+.d-flex{
+    display: flex !important;
+}
+
+
+.d-block{
+    display: block !important;
+}
+
+.display{
+    display: flex;
+}
+
+.justify-content-end{
+    justify-content: end;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.align-items-center{
+align-items: center !important;
+}
+.color-orange {
+    color: $colorOrange !important;
+}
+
+h1,h2,h3,b{
+  font-family: 'Raleway' !important;
+}
+
+p,a,button,span,label, mat-option, mat-button{
+ font-family: 'Raleway' !important;
+}
+
+hr{
+    width: 100% !important;
+    height: 2px !important;
+    background-color: #D9DBE9 !important;
+}
+.pl-20{
+    padding-left: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    line-height: 100%;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: 'Raleway';
+    &.title-alert{
+        font-size: 22px !important;
+    }
+}
+
+.title-indicator{
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #999999;
+    font-family: "Raleway";
+}
+
+.second-title{
+    font-size: 1.5rem;
+    color: #3f3f3f;
+    line-height: 100%;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-family: "Raleway";
+}
+
+.cod-title{
+    font-size: medium;
+    color: #3f3f3f;
+    font-weight: 700;
+    font-family: "Raleway";
+}
+.bold{
+    font-weight: bold !important;
+    color:#3f3f3f !important;
+}
+.billing-main-info{
+    font-family: "Raleway";
+    color: #3f3f3f;
+    font-weight: 700;
+}
+
+.billing-secondary-info{
+    font-family: "Raleway";
+    color: #999999;
+}
+.paragraph, .third-title{
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 13px;
+    color: #999999;
+    &.light{
+     font-weight: 300;
+    }
+    &.color-dark{
+        color:#333;
+    }
+}
+
+.bold{
+  font-family: 'Raleway';
+  color:#333;
+}
+
+
+.bg-orange-top{
+    border-top: solid 1.5px #ff812c;
+    border-left: solid 1.5px #ff812c;
+    border-right: solid 1.5px #ff812c;
+}
+
+.bg-orange-mid{
+    border-left: solid 1.5px #ff812c;
+    border-right: solid 1.5px #ff812c;
+}
+
+.bg-orange-bt{
+    border-left: solid 1.5px #ff812c;
+    border-right: solid 1.5px #ff812c;
+    border-bottom: solid 1.5px #ff812c;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+//tables
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.flendy-tbody{
+    display: table-row-group;
+}
+.flendy-table{
+    display: table;
+    width: 100%;
+    border-collapse: collapse !important;
+    border-spacing: 0px !important;
+    min-width: 640px;
+    &.border{
+        border-collapse: separate !important;
+        border-spacing: 0px 16px !important;
+    }
+}
+.flendy-table-head{
+    display: table-header-group;
+}
+
+.flendy-tr{
+    color: inherit;
+    display: table-row;
+    vertical-align: middle;
+    outline: 0px;
+    transition: all .3s ease-in-out;
+    &:hover{
+        transition: all .3s ease-in-out;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(145, 158, 171, 0.16) 0px 20px 40px -4px;
+    }
+    &.border-radius-10{
+        border-radius: 10px !important;
+    }
+    &.with-dflex{
+        display: flex;
+    }
+    &.border-top{
+        border-top: 1px solid rgba(145, 158, 171, 0.16);
+    }
+    
+    &.border-bottom{
+        border-bottom: 1px solid rgba(145, 158, 171, 0.16);
+    }
+
+    &.border-left{
+        border-left: 1px solid rgba(145, 158, 171, 0.16) !important;
+    }
+
+    &.border-right{
+        border-right: 1px solid rgba(145, 158, 171, 0.16) !important;
+    }
+    &.border-top-left-radius-10{
+        border-top-left-radius: 10px !important;
+    }
+    &.border-bottom-left-radius-10{
+        border-bottom-left-radius: 10px !important;
+    }
+    &.border-top-right-radius-10{
+        border-top-right-radius: 10px !important;
+    }
+    &.border-bottom-right-radius-10{
+        border-bottom-right-radius: 10px !important;
+    }
+}
+
+.flendy-card{
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 43, 54);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-image: none;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 2px 0px, rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
+    border-radius: 16px;
+    z-index: 0;
+    &.container-organization{
+        width: 1195px !important;
+    }
+
+    .flendy-card-header{
+        position: relative;
+        display: block;
+        -webkit-box-align: center;
+        align-items: center;
+        width: 100%;
+        padding: 0px 24px 0px;
+        margin-bottom: 24px;
+
+        .container-banner{
+            position: relative;
+            width: 96%;
+            height: 230px;
+            border-radius: 10px;
+            background-image: url("https://static.ifood-static.com.br/image/upload//capa/18015426-6666-4bf6-bf69-999ee181ad12/202208191201_5V28_i@2x.jpg");
+        }
+    }
+    .flend-card-body,.flendy-card-body{
+        position: relative;
+        display: block;
+        -webkit-box-align: center;
+        align-items: center;
+        width: 96%;
+        padding: 24px 24px 0px;
+        margin-bottom: 24px;
+    }
+
+    .flendy-card-bottom{
+        position: absolute;
+        bottom: 0;
+        display: block;
+        -webkit-box-align: center;
+        align-items: center;
+        width: 96%;
+        padding: 24px 24px 0px;
+        margin-bottom: 24px;
+    }
+
+    .flendy-table-pagination,.flendy-table-bottom {
+        overflow: auto;
+        color: rgb(33, 43, 54);
+        font-size: 0.875rem;
+        width: 100%;
+        border-top-color: transparent;
+    }
+
+    .flendy-table-pagination{
+        height: 70px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: end !important;
+        overflow: hidden !important;
+    }
+    
+    .flendy-table-bottom{
+        position: relative;
+        display: block;
+        -webkit-box-align: center;
+        align-items: center;
+        width: 96%;
+        padding: 0px 24px 0px;
+        margin-bottom: 24px;
+    }
+
+    &.container-product{
+        position: relative;
+        //height: 395px !important;
+        height: 372px !important;
+       
+        .flendy-card-header{
+            margin-bottom: 0px !important;
+            &.second-style{
+                padding: 0px !important;
+                .container-banner{
+                    width: 100% !important;
+                    img,img.product-image{
+                        border-bottom-left-radius: 4px !important;
+                        border-bottom-right-radius: 4px !important;
+                    }
+                }
+            }
+            .container-banner{
+                position: relative;
+                width: 301px;
+                height: 180px;
+                img,img.product-image{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px !important;
+                }
+                
+            }
+            .discount{
+                position: absolute;
+                top:40px;
+                right: 95px;
+            }
+        }
+
+        .flendy-card-body{
+            width: 94% !important;
+            padding: 10px;
+            .product-name{
+                font-size: 17px !important;
+                font-family: "Poppins SemiBold";
+            }
+        }
+
+        .flendy-card-bottom{
+            .price{
+                font-size: 16px !important;
+            }
+        }
+
+    }
+}
+
+.flendy-custom-th{
+    line-height: 1.5rem;
+    display: table-cell;
+    vertical-align: inherit;
+    border-bottom: 1px dashed rgb(241, 243, 244);
+    text-align: left;
+    padding: 16px;
+    font-size: 14px;
+    color: rgb(99, 115, 129);
+    font-weight: 600;
+    background-color: rgb(244, 246, 248);
+    p{
+        color: rgb(99, 115, 129) !important;
+    }
+}
+
+.flendy-custom-td{
+    line-height: 1.57143;
+    font-size: 0.875rem;
+    font-weight: 400;
+    vertical-align: inherit;
+    border-bottom: 1px dashed rgb(241, 243, 244);
+    text-align: left;
+    padding: 16px;
+    color: rgb(33, 43, 54);
+    -webkit-box-align: center;
+    align-items: center;
+    &.with-dflex{
+        display: flex;
+    }
+    &.border-top{
+        border-top: 1px solid rgba(145, 158, 171, 0.16);
+    }
+    
+    &.border-bottom{
+        border-bottom: 1px solid rgba(145, 158, 171, 0.16);
+    }
+
+    &.border-left{
+        border-left: 1px solid rgba(145, 158, 171, 0.16) !important;
+    }
+
+    &.border-right{
+        border-right: 1px solid rgba(145, 158, 171, 0.16) !important;
+    }
+    &.border-top-left-radius-10{
+        border-top-left-radius: 10px !important;
+    }
+    &.border-bottom-left-radius-10{
+        border-bottom-left-radius: 10px !important;
+    }
+    &.border-top-right-radius-10{
+        border-top-right-radius: 10px !important;
+    }
+    &.border-bottom-right-radius-10{
+        border-bottom-right-radius: 10px !important;
+    }
+}
+
+
+
+//badge
+.flendy-badge{
+    height: 24px;
+    min-width: 24px;
+    line-height: 0;
+    border-radius: 6px;
+    cursor: default;
+    -webkit-box-align: center;
+    align-items: center;
+    white-space: nowrap;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0px 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    
+
+    &.danger{
+        color: rgb(183, 29, 24);
+        background-color: rgba(255, 86, 48, 0.16);
+    }
+
+    &.warning{
+        color: rgb(183, 110, 0);
+        background-color: rgba(255, 171, 0, 0.16);
+    }
+    &.success{
+        color: $success-dark;
+        background-color: $success;
+    }
+
+    &.blue{
+        color: $blue-dark;
+        background-color: $blue;
+    }
+}
+
+.container-section-option{
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    padding: 10px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    cursor: pointer;
+
+    .panel-icon{
+        //width: 15%;
+        width: 105px !important;
+        .icon{
+            width: 75px;
+            height: 75px;
+            margin-left: 20px;
+            transform: translateY(15px);
+        }
+
+
+        
+    }
+
+    .mobile{
+        display: none !important;
+    }
+
+    .desktop{
+      display: block !important;
+    }
+
+    .container-filter{
+        display: flex !important;
+     }
+
+    .panel-info{
+        //width: 85%;
+        width: 596px;
+        padding-right: 20px;
+    }
+}
+
+.ml-15{
+    margin-left: 15px !important;
+}
+
+.mr-8{
+    margin-right: 8px !important;
+}
+
+.mr-15{
+    margin-right: 15px !important;
+}
+
+.pt-5{
+    padding-top: 5px !important;
+}
+
+.button-page{
+    width: 40px !important; 
+    height: 40px !important;
+    background-color: transparent !important;
+    box-shadow: none !important;color:#888 !important;
+    color:#333 !important;
+    &:disabled{
+        color: rgba(0,0,0,0.3) !important;
+        opacity: 0.6 !important;
+        cursor: no-drop;
+    }
+}
+
+.bg-transparent{
+    background-color: transparent;
+    --background-color: transparent;
+    --ion-background: transparent;
+}
+
+.border-dark{
+    border: 2px solid #5F5F5F;
+}
+
+.color-dark{
+    color:#5F5F5F !important;
+}
+
+.panel-left{
+    width: 100% !important;
+}
+
+.panel-right{
+    width: 100% !important;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+}
+.container-panel{
+    width: 100%;
+    display: block !important;
+}
+
+.celsia-container{
+    width: 100% !important;
+    padding: 0 30px;
+    &.mt-90{
+        margin-top: 20px;
+    }
+    .ion-padding-horizontal{
+        width: 100% !important;
+        padding: 0px !important;
+    }
+}
+
+.container-search{
+    width: 100%;
+    display: block;
+    .mat-form-field,mat-form-field{
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+    button{
+        width: 100% !important;
+    }
+}
+
+
+  /* Contenedor interno de las pestañas */
+  .tabs {
+    overflow-x: auto;
+    width: 70%;
+    border: solid 1px #cccccc;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+    // padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Ocultar los botones de radio */
+  .tabs input[type="radio"] {
+    display: none;
+  }
+  
+  /* Estilo general de las etiquetas de las pestañas */
+  .tab-label {
+    flex-grow: 1;
+    //width: 33%;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px !important;
+    font-weight: bold;
+    color: #666666;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    z-index: 1;
+    position: relative;
+    white-space: nowrap; /* Evita que el texto se corte */
+  }
+  
+  /* Estilo para el fondo deslizante */
+  .slider {
+    position: absolute;
+    height: calc(100% - 10px);
+    background-color: #cccccc;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 0;
+  }
+  
+  /* Tamaño del slider según la pestaña seleccionada */
+  #tab1:checked ~ .slider {
+    height: -webkit-fill-available;
+    left: 0px;
+    width: 50%;
+  }
+  
+  #tab2:checked ~ .slider {
+    height: -webkit-fill-available;
+    width: 50%;
+    left: 50%;
+    //left: calc(33.3333% + 5px);
+    //width: calc(33.3333% - 10px);
+  }
+  
+//   #tab3:checked ~ .slider {
+//     height: -webkit-fill-available;
+//     left: calc(66.6666% + 5px);
+//     width: calc(33.3333% - 5px);
+//   }
+  
+ 
+  #tab1:checked + .tab-label {
+    color: white;
+  }
+  
+  #tab2:checked + .tab-label {
+    color: white;
+  }
+  
+//   #tab3:checked + .tab-label {
+//     color: white;
+//   }
+
+  .input-container{
+    width: 70%;
+    margin-top: 10px;
+  }
+
+ 
+  
+  
+  /* Responsivo: ajustar la altura del slider en pantallas pequeñas */
+  @media (max-width: 600px) {
+    .tab-label {
+      font-size: 14px;
+    }
+    .slider {
+      height: calc(100% - 8px);
+    }
+  }
+
+
+  @media (max-width: 768px) {
+   
+    #tab1,#tab2{
+        position: relative;
+        &:checked ~ .slider {
+            height: -webkit-fill-available;
+            left: 0px;
+            width: 0%;
+        }
+        &:checked + .tab-label{
+            width: auto;
+            max-width: 220px;
+            background-color: #cccccc;
+            border-radius: 20px;
+        }
+    }
+    .tab-label{
+        width: auto;
+        max-width: 220px;
+    }
+   
+  }
+   
+  @media (max-width: 1024px) {
+    .tabs{
+        width: 100%;
+    }
+    .input-container{
+        width: 100%;
+      }
+  }
+  
+
+
+ .mat-ink-bar{
+//     height: 100% !important;
+//     border-radius: 5px;
+//     visibility: visible;
+//     z-index: 0;
+// }
+
+// .customTheme .mat-tab-label-active{
+//     color: #333;
+//     z-index: 1;
+// }
+
+//// .mat-tab-group{
+//     border: 1px solid #C3C3C3;
+//     border-radius: 5px;
+// }
+
+
+.container-search-sections{
+    width: 100%;
+    position: relative;
+}
+
+.container-search-sections::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+}
+
+
+ 
+
+
+
+@media only screen and (min-width: 1024px){
+   
+    .container-section-option{
+        .panel-icon{
+         width: 175px !important;
+         transform: translate(-10px,30px);
+        }
+    }
+    .celsia-container{
+        width: 90% !important;
+        padding: 0 5px;
+        &.mt-90{
+            margin-top: 90px;
+        }
+    }
+    .container-panel{
+        width: 100%;
+        display: flex !important;
+    }
+    .panel-left{
+        width: 70% !important;
+        margin-bottom: 0px !important;
+    }
+    
+    .panel-right{
+        width: 30% !important;
+        margin-top: 0px !important;
+    }
+
+    .container-search{
+        width: 100%;
+        display: flex;
+        .mat-form-field,mat-form-field{
+            width: 90% !important;
+            margin-bottom: 0px !important;
+        }
+        button{
+            width: auto !important;
+        }
+    }
+}
+    </style>
+
+</head>
+<body>
+    <div style="padding: 15px; padding-left: 25px; padding-right: 25px;">
+    <div class="w-100 d-flex">
+        <div class="w-100 d-block">
+          <div class="container-panel w-100 mb-15">
+            <div class="w-70 d-block mr-15 panel-left">
+              <div class="w-100 d-block">
+                <div class="flendy-card w-100 mr-15">
+                  <div class="flendy-card-header">
+                    <div class="flendy-row w-96">
+                      <ion-row class="w-100 mt-20">
+                        <div class="d-flex w-100"> 
+                          <div  style="width: 100%; ">
+                           <h2 class="second-title">Codigo de cuenta:10842</h2> 
+                          
+                          </div>
+                      
+                        </div>
+                        
+                      
+                        <p class="third-title"
+                          style="margin:0px !important; margin-bottom: 15px !important;text-align: left;width: 100%;">
+                         CLL 14 # 1-23 SUR
+                        </p>
+                        <h2 class="second-title" style="width: 100%; text-align: left;">Conceptos facturados</h2>
+                        <p class="third-title"
+                          style="margin:0px !important; margin-bottom: 15px !important;text-align: left;width: 100%;">
+                          A continuacion, te compartimos el detalle de tu ultimo periodo facturado.
+                        </p>
+                        </ion-row>
+
+                       
+                     
+                    </div>
+                    <div class="d-flex justify-content-center w-96 p-0">
+                    
+                    </div>
+                  </div>
+                  <div style="overflow: auto;">
+                    <table class="flendy-table">
+                      <thead class="flendy-table-head">
+                        <tr class="flendy-tr">
+                          <th class="flendy-custom-th" scope="col" style="width: 20%;">Concepto</th>
+                          <th class="flendy-custom-th" scope="col" style="width: 40%;">Valor mes</th>
+                        </tr>
+                      </thead>
+
+                      <tbody class="flendy-tbody">                    
+                     <tr><td style='padding:10px'>CARGO VARIABLE APROVECHABLE</td><td style='padding:10px'>$299</td></tr><tr><td style='padding:10px'>CARGO FIJO ASEO</td><td style='padding:10px'>$31133</td></tr><tr><td style='padding:10px'>CARGO VARIABLE NO A.</td><td style='padding:10px'>$23437</td></tr><tr><td style='padding:10px'>IMPUESTO A. PUBLICO</td><td style='padding:10px'>$991125</td></tr><tr><td style='padding:10px'>CONTRIBUCION ASEO</td><td style='padding:10px'>$27435</td></tr><tr><td style='padding:10px'>CONSUMO ACTIVA</td><td style='padding:10px'>$7079465</td></tr>
+                        <tr class="flendy-tr">
+                          <td class="flendy-custom-td">
+                            <b>TOTAL MES</b>
+                          </td>
+                          <td class="flendy-custom-td">
+                            8152894
+                          </td>
+                        </tr>
+                      
+                      </tbody>
+                      
+                  
+                    </table>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="w-33 d-block panel-right">
+              <div class="w-100 d-flex" >
+                <div class="w-100 d-block">
+                
+                    <div class="flendy-card w-100 ">
+                      <div class="flendy-card-header">
+                        <div class="flendy-row w-96">
+                          <div class="w-100 mt-20" style="padding: 10px;">
+                            <h2 class="second-title" style="width: 100%; text-align: left;">Conceptos facturados </h2>
+                            <p class="third-title"
+                              style="margin:0px !important; margin-bottom: 15px !important;text-align: left;width: 100%;">
+                            De tu factura, el 30% corresponde a energía.
+                            </p>
+
+                            <div style="display: flex; justify-content: center;">
+                                <img src="imagen.png" alt="">
+                            </div>
+                            
+                            
+
+
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="w-100 d-flex" >
+        <div class="w-100 d-block">
+          <div class="flendy-card w-100 mr-15">
+            <div class="flendy-card-header">
+              <div class="flendy-row w-96">
+                <ion-row class="w-100 mt-20">
+                  <h2 class="second-title" style="width: 100%; text-align: left;">Estado de Financiaciones</h2>
+                  <p class="third-title"
+                    style="margin:0px !important; margin-bottom: 15px !important;text-align: left;width: 100%;">
+                    Aqui podras ver los créditos o acuerdos de pago que has realizado con Celsia.
+                  </p>
+                </ion-row>
+              </div>
+              <div class="d-flex justify-content-center w-96 p-0">
+              
+              </div>
+            </div>
+            <div style="overflow: auto;">
+              <table class="flendy-table">
+                <thead class="flendy-table-head">
+                  <tr class="flendy-tr">
+                    <th class="flendy-custom-th" scope="col">Concepto</th>
+                    <th class="flendy-custom-th" scope="col">Estado</th>
+                    <th class="flendy-custom-th" scope="col">Fecha de creación</th>
+                    <th class="flendy-custom-th" scope="col">Valor financiado</th>
+                    <th class="flendy-custom-th" scope="col">Cuota mensual</th>
+                    <th class="flendy-custom-th" scope="col">Estado de cuotas</th>
+                    <th class="flendy-custom-th" scope="col">Propietario de cuenta</th>
+                  </tr>
+                </thead>
+
+                <tbody class="flendy-tbody"> 
+                                 
+                </tbody>
+                
+            
+              </table>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
